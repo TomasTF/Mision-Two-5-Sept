@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peruvian Sushi</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js" defer></script>
+
+</head>
+<body>
+    
+<!-- INTRO WEB -->
+    <header class="hero" id="home">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <h2 class="nav__title">#SushiLover</h2>
+            </div>
+
+            <ul class="nav__link nav__link--menu">
+                <li class="nav__items">
+                    <a href="#home" class="nav__link">Home</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#aboutus" class="nav__link">About Us</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#menu" class="nav__link">Menu</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#contact" class="nav__link">Contact Us</a>
+                </li>
+                <li class="nav__items">
+                    <div class="icon-cart">
+                        <img src="./Imagen/shoppingcart.svg">
+                        <span id="cart-count">0</span>
+
+                    </div>
+                </li>
+
+                <img src="./imagen/close.svg" class="nav__close">
+                
+            </ul>
+
+            <div class="nav__menu">
+                <img src="./imagen/menu.svg" class="nav__img">
+            </div>
+         
+        </nav>
+
+        <section class="hero__container container">
+            <h1 class="hero__title">Peruvian Sushi</h1>
+            <p class="hero_paragraph">Sushi, a revered culinary art, originates from Japan and epitomizes precision and creativity. This technique involves expertly combining vinegared rice with fresh seafood, vegetables, and other ingredients to create visually stunning and flavorful dishes. Each piece of sushi is a testament to the skill and dedication of the sushi chef, reflecting centuries of tradition and innovation</p>
+            <a href="#menu" class="cta">Order Now</a>
+
+        </section>
+    </header>
+
+<!--  ABOUT US -->
+    <main>
+        <section class="aboutus" id="aboutus">
+            <div class="aboutus__container container">
+                <div class="aboutus__texts">
+                    <h2 class="subtitle">About Us</h2>
+                    <p>Located in the heart of Mount Maunganui, Tauranga, New Zealand, our Peruvian fusion sushi restaurant offers a unique culinary experience that combines the best of Japanese and Peruvian cuisine. Our extensive menu of sushi rolls, crafted with fresh, high-quality ingredients, promises to satisfy even the most discerning palates.</p>
+                    <p>Inspired by the rich cultural and gastronomic heritage of Peru, our chefs have created a variety of rolls that stand out for their innovative flavors and artistic presentations. From the classic California Roll with a Peruvian twist to our more daring specialties, every bite is an explosion of flavor.</p>
+                    <p>In our cozy restaurant, we invite you to enjoy an unparalleled dining experience, whether you are looking for an intimate dinner, a celebration with friends, or a family gathering. Our team is dedicated to providing exceptional service and making your visit a memorable one.</p>
+                    <p>Come and discover the art of Peruvian fusion sushi in beautiful Mount Maunganui!</p>
+                    <a href="#contact" class="cta">Join our Team</a>
+                </div>
+                <figure class="aboutus__picture">
+                    <img src="./imagen/Itamae Staff.avif" class="aboutus__img">
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <!-- MENU -->
+    <section id="menu">
+        <h1 class="order-title">Click if you are ready to order</h1>
+        <div class="menu-container">
+            <div class="listProduct">
+                <div class="item">
+                    <img src="./Imagen/Acevichado Maki.jpg" alt="">
+                    <h2>Acevichado Roll</h2>
+                    <div class="price">$12</div>
+                    <button class="addCart" onclick="addToCart('Acevichado Roll', 12)">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <img src="./Imagen/Nigiri Tuna.jpg" alt="">
+                    <h2>Nigiri Tuna</h2>
+                    <div class="price">$14</div>
+                    <button class="addCart" onclick="addToCart('Nigiri Tuna', 14)">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <img src="./Imagen/Nigiri Salmon.jpg" alt="">
+                    <h2>Nigiri Salmon</h2>
+                    <div class="price">$15</div>
+                    <button class="addCart" onclick="addToCart('Nigiri Salmon', 15)">Add to Cart</button>
+                </div>
+                
+            </div>
+    
+            <div class="cart">
+                <h2>Order</h2>
+                <ul id="cartItems"></ul>
+                <div id="totalAmount">Total: $0.00</div> <!-- Total -->
+            </div>
+            
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+
+     <footer class="footer" id="contact">
+        <section class="footer__container container">
+            <nav class="nav nav--footer">
+                <h2 class="footer__title">Peruvian Sushi</h2>
+
+                <ul class="nav__link nav__link--footer">
+                    <li class="nav__items">
+                        <a href="#" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="#" class="nav__link">About Us</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="#" class="nav__link">Menu</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="#" class="nav__link">Contact Us</a>
+                    </li>
+                </ul>
+
+            </nav>
+
+            <form class="footer__form">
+             <h2 class="footer__newsletter"> Suscribe and get especial offers</h2>
+                <div class="footer__inputs">
+                 <input type="email" placeholder="Email:" class="footer__input">
+                    <input type="submit" value="Register" class="footer__submit">
+                </div>
+             </form>
+        </section>
+
+        <section class="footer__copy container">
+            <div class="footer__social">
+                <a href="#" class="footer__icons"><img src="./Imagen/facebook.svg" class="footer__img"></a>
+                <a href="#" class="footer__icons"><img src="./Imagen/instagram.svg" class="footer__img"></a>
+                <a href="#" class="footer__icons"><img src="./Imagen/youtube.svg" class="footer__img"></a>
+            </div>
+
+            <h3 class="footer__copyright"> All rights reserved &copy; Tomas Torres</h3>
+        </section>
+
+
+     </footer>
+
+      
+</body>
+</html>
